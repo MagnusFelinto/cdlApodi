@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/custom.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <title>Formulario de pesquisa</title>
+  <script type="text/javascript">
+    function chkcontrol(j) {
+          var total=0;
+          for(var i=0; i < document.form1.ckb.length; i++){
+            if(document.form1.ckb[i].checked){
+              total =total +1;
+            }
+            if(total > 3){
+                alert("Selecione apenas três") 
+                document.form1.ckb[j].checked = false ;
+                return false;
+            }
+          }
+      } 
+  </script>
+  <style>
+   section.sec div.container{
+    margin-left:5%;
+   }
+   .form1 .salvar{
+    margin-left: 48%;
+   }
+
+  </style>
+</head>
+
+<body>
+  <section class="sec" >
+  <div class="container1" >
+  </div> 
+  <div class="container" >
+    <form action="post" class="form1 " name=form1>
+        <div class="input-01">
+            <label class="input-01 centro" 
+                 for="inputSelect01">
+                 1  - Dados de Identificação dos Entrevistados
+            </label>
+              <br>
+            <select class="custom-select" id="inputSelect01-00"required="required">
+                <option selected>Selecione o bairro...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+            <select class="custom-select" id="inputSelect01-01" required>
+              <option selected>Selecione a comunidade...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <select class="custom-select" id="inputSelect01-02"required>
+                <option selected>Ambiente da entrevista...</option>
+                <option value="1">Rua</option>
+                <option value="2">Casa</option>
+            </select>
+        </div>
+
+        <div class="input-02">
+          <label class="input-02" 
+                 for="inputSelect02">
+                 2 - Segmento
+          </label>
+            <div class="form-check form-check-inline-02">
+              <input class="form-check-input-02" type="radio" name="inlineRadioOptions-02" id="inlineRadio1" value="opcao1">
+              <label class="form-check-label-02" for="inlineRadio1">Lojista</label>
+            </div>
+            <div class="form-check form-check-inline-02">
+              <input class="form-check-input-02" type="radio" name="inlineRadioOptions-02" id="inlineRadio2" value="opcao2">
+              <label class="form-check-label-02" for="inlineRadio2">Universitário</label>
+            </div>
+            <div class="form-check form-check-inline-02">
+              <input class="form-check-input-02" type="radio" name="inlineRadioOptions-02" id="inlineRadio3" value="opcao3">
+              <label class="form-check-label-02" for="inlineRadio3">Estudante de Ensino Médio</label>
+            </div>
+            <div class="form-check form-check-inline-02">
+              <input class="form-check-input-02" type="radio" name="inlineRadioOptions-02" id="inlineRadio4" value="opcao4">
+              <label class="form-check-label-02" for="inlineRadio4">Comunidade em Geral</label>
+            </div>
+          </div>
+        
+
+        <div class="input-03">
+          <label class="input-03" 
+                 for="inputSelect03">
+                 3 – Gênero
+          </label>
+          <div class="form-check form-check-inline01">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-03" id="inlineRadioFeminino" value="opcao1">
+            <label class="form-check-label" for="inlineRadioFeminino">Feminino</label>
+          </div>
+          <div class="form-check form-check-inline01">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-03" id="inlineRadioMasculino" value="opcao2">
+            <label class="form-check-label" for="inlineRadioMasculino">Masculino</label>
+          </div>
+          <div class="form-check form-check-inline01">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-03" id="inlineRadioOutro" value="opcao3">
+            <label class="form-check-label" for="inlineRadioOutro">Outro</label>
+          </div>
+        </div>
+     
+
+           <div class="input-04">
+              <label class="input-04" 
+                 for="inputSelect04">
+                 4 – Identidade de gênero
+                 <!---() Cisgênero () Transgênero () Não-binário ( ) Neutro ( ) Queer ( ) Outro-->
+              </label>
+              <div class="form-check form-check-inline02">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions-04" id="inlineRadioCisgênero" value="opcao1">
+                <label class="form-check-label" for="inlineRadioCisgênero">Cisgênero</label>
+              </div>
+              <div class="form-check form-check-inline02">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions-04" id="inlineRadioTransgênero" value="opcao2">
+                <label class="form-check-label" for="inlineRadioTransgênero">Transgênero</label>
+              </div>
+              <div class="form-check form-check-inline02">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions-04" id="inlineRadiobinário" value="opcao3">
+                <label class="form-check-label" for="inlineRadiobinário">Não-binário</label>
+              </div>
+              <div class="form-check form-check-inline02">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions-04" id="inlineRadioNeutro" value="opcao4">
+                <label class="form-check-label" for="inlineRadioNeutro">Neutro</label>
+              </div>
+              <div class="form-check form-check-inline02">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions-04" id="inlineRadioQueer" value="opcao5">
+                <label class="form-check-label" for="inlineRadioQueer">Queer</label>
+              </div>
+              <div class="form-check form-check-inline02">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions-04" id="inlineRadioOutro01" value="opcao6">
+                <label class="form-check-label" for="inlineRadioOutro01">Outro</label>
+              </div>
+        </div>
+
+
+        <div class="input-05">
+          <label class="input-05" 
+                 for="inputSelect05">
+                 5 Orientação sexual
+                 <!--() Heterossexual () Homossexual () Bissexual () Assexual ( ) Pansexual ( ) Outro-->
+          </label>
+          <div class="form-check form-check-inline03">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-05" id="inlineRadioHeterossexual" value="opcao1">
+            <label class="form-check-label" for="inlineRadioHeterossexual">Heterossexual</label>
+          </div>
+          <div class="form-check form-check-inline03">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-05" id="inlineRadioHomossexual" value="opcao2">
+            <label class="form-check-label" for="inlineRadioHomossexual">Homossexual</label>
+          </div>
+          <div class="form-check form-check-inline03">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-05" id="inlineRadiAssexual" value="opcao3">
+            <label class="form-check-label" for="inlineRadioAssexual">Assexual</label>
+          </div>
+          <div class="form-check form-check-inline03">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-05" id="inlineRadioPansexual" value="opcao4">
+            <label class="form-check-label" for="inlineRadioPansexual">Pansexual</label>
+          </div>
+          <div class="form-check form-check-inline03">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-05" id="inlineRadioOutro02" value="opcao5">
+            <label class="form-check-label" for="inlineRadioOutro02">Outro</label>
+          </div>
+            
+        </div>
+
+
+        <div class="input-06">
+          <label class="input-06" 
+                 for="inputSelect06">
+                 6 – Faixa etária
+                 <!---() 15 a 25 anos () 26 a 36 anos () 37 a 47 anos () 48 a 58 anos ( ) 59 a 69 anos ( ) acima de 69 anos.-->
+          </label>
+          <div class="form-check form-check-inline04">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-06" id="inlineRadioFaixa0" value="opcao1">
+            <label class="form-check-label" for="inlineRadioFaixa0">15 a 25 anos</label>
+          </div>
+          <div class="form-check form-check-inline04">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-06" id="inlineRadioFaixa1" value="opcao2">
+            <label class="form-check-label" for="inlineRadioFaixa1">26 a 36 anos</label>
+          </div>
+          <div class="form-check form-check-inline04">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-06" id="inlineRadiFaixa3" value="opcao3">
+            <label class="form-check-label" for="inlineRadioFaixa3">37 a 47 anos</label>
+          </div>
+          <div class="form-check form-check-inline04">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-06" id="inlineRadioFaixa4" value="opcao4">
+            <label class="form-check-label" for="inlineRadioFaixa4">48 a 58 anos</label>
+          </div>
+          <div class="form-check form-check-inline04">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-06" id="inlineRadioFaixa5" value="opcao5">
+            <label class="form-check-label" for="inlineRadioFaixa5">59 a 69 anos</label>
+          </div>
+          <div class="form-check form-check-inline04">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-06" id="inlineRadioFaixa6" value="opcao6">
+            <label class="form-check-label" for="inlineRadioFaixa6">acima de 69 anos</label>
+          </div>
+            
+        </div>
+        <div class="input-07">
+          <label class="input-07" 
+                 for="inputSelect07">
+                 7 - Escolaridade
+                 <!--( ) Analfabeto ( ) Ensino Fundamental Incompleto () Ensino fundamental Completo () Ensino Médio Incompleto 
+                     ( ) Ensino Médio Completo () Ensino Superior Incompleto () Ensino Superior Completo () Pós-graduação-->
+          </label>
+          <div class="form-check form-check-inline05">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-07" id="inlineRadioAnalfabeto" value="opcao1">
+            <label class="form-check-label" for="inlineRadioAnalfabeto">Analfabeto</label>
+          </div>
+          <div class="form-check form-check-inline05">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-07" id="inlineRadioFundamental-I" value="opcao2">
+            <label class="form-check-label" for="inlineRadioFundamental-I">Ensino Fundamental Incompleto</label>
+          </div>
+          <div class="form-check form-check-inline05">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-07" id="inlineRadifundamental-C" value="opcao3">
+            <label class="form-check-label" for="inlineRadiofundamental-C">Ensino fundamental Completo</label>
+          </div>
+          <div class="form-check form-check-inline05">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-07" id="inlineRadioMédio-I" value="opcao4">
+            <label class="form-check-label" for="inlineRadioMédio-I">Ensino Médio Incompleto</label>
+          </div>
+          <div class="form-check form-check-inline05">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-07" id="inlineRadioMédio-C" value="opcao5">
+            <label class="form-check-label" for="inlineRadioMédio-C">Ensino Médio Completo</label>
+          </div>
+          <div class="form-check form-check-inline05">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-07" id="inlineRadioSuperior-I" value="opcao6">
+            <label class="form-check-label" for="inlineRadioSuperior-I">Ensino Superior Incompleto</label>
+          </div>
+          <div class="form-check form-check-inline05">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-07" id="inlineRadioSuperior-C" value="opcao7">
+            <label class="form-check-label" for="inlineRadioSuperior-C">Ensino Superior Completo</label>
+          </div>
+          <div class="form-check form-check-inline05">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-07" id="inlineRadioPós-graduação" value="opcao8">
+            <label class="form-check-label" for="inlineRadioPós-graduação">Pós-graduação</label>
+          </div>
+         
+        </div>
+
+
+        <div class="input-08">
+          <label class="input-08" 
+                 for="inputSelect08">
+                 8 - Faixa de renda
+                 <!--() Até 1 salário-mínimo () Acima de 1salário mínimo até 3 salários 
+                     () Acima de 3 salários-mínimos até 5 salários () Acima de 5 salários-mínimos até 7 salários.
+                     () Acima de 7 salários-mínimos até 9 salários. () Acima de 9 salários-mínimos. 
+                     () Prefiro não declarar-->
+          </label>
+          <div class="form-check form-check-inline06">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-08" id="inlineRadio1salários" value="opcao1">
+            <label class="form-check-label" for="inline1salários">Até 1 salário-mínimo</label>
+          </div>
+          <div class="form-check form-check-inline06">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-08" id="inlineRadioA-1salários" value="opcao2">
+            <label class="form-check-label" for="inlineRadioA-1salários">Acima de 1salário mínimo até 3 salários </label>
+          </div>
+          <div class="form-check form-check-inline06">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-08" id="inlineRadioA-3salários" value="opcao3">
+            <label class="form-check-label" for="inlineRadioA-3salários">Acima de 3 salários-mínimos até 5 salários</label>
+          </div>
+          <div class="form-check form-check-inline06">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-08" id="inlineRadioA-5salários" value="opcao4">
+            <label class="form-check-label" for="inlineRadioA-5salários">Acima de 5 salários-mínimos até 7 salários</label>
+          </div>
+          <div class="form-check form-check-inline06">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-08" id="inlineRadioA-7salários" value="opcao5">
+            <label class="form-check-label" for="inlineRadioA-7salários">Acima de 7 salários-mínimos até 9 salários.</label>
+          </div>
+          <div class="form-check form-check-inline06">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-08" id="inlineRadioA-9salários" value="opcao6">
+            <label class="form-check-label" for="inlineRadioA-9salários">Acima de 9 salários-mínimos</label>
+          </div>
+          <div class="form-check form-check-inline06">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-08" id="inlineRadioNdeclarar" value="opcao7">
+            <label class="form-check-label" for="inlineRadioNdeclarar">Prefiro não declarar</label>
+          </div>
+        </div>
+        <div class="input-09">
+          <label class="input-09" 
+                 for="inputSelect09">
+                 9- Você possui algum animal de criação/estimação?
+                 <!--() Criação () Estimação () Não-->
+          </label>
+          <div class="form-check form-check-inline07">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-09" id="inlineRadioCriação" value="opcao1">
+            <label class="form-check-label" for="inlineRadioCriação">Criação</label>
+          </div>
+          <div class="form-check form-check-inline07">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-09" id="inlineRadioEstimação" value="opcao2">
+            <label class="form-check-label" for="inlineRadioEstimação">Estimação</label>
+          </div>
+          <div class="form-check form-check-inline07">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-09" id="inlineRadioNão0" value="opcao3">
+            <label class="form-check-label" for="inlineRadioNão0">Não</label>
+          </div>
+        </div>
+        <div class="input-10">
+          <label class="input-10" 
+                 for="inputSelect10">
+                 10- Em sua residência alguma pessoa utiliza serviço de saúde como, plano de saúde, academia, farmácia, entre outros.
+                  <!--() Sim () Não-->
+                </label>
+          <div class="form-check form-check-inline08">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-10" id="inlineRadioSim1" value="opcao1">
+            <label class="form-check-label" for="inlineRadioSim1">Sim</label>
+          </div>
+          <div class="form-check form-check-inline08">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-10" id="inlineRadioNão1" value="opcao2">
+            <label class="form-check-label" for="inlineRadioNão1">Não</label>
+          </div>
+        </div>
+
+
+        <div class="input-11">
+          <label class="input-11" 
+                 for="inputSelect11">
+                 11- Na sua residência há algum veículo?
+                 <!--() Moto () Carro () Maquinário () Não-->
+          </label>
+          <div class="form-check form-check-inline09">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-11" id="inlineRadioMoto" value="opcao1">
+            <label class="form-check-label" for="inlineRadioMoto">Moto</label>
+          </div>
+          <div class="form-check form-check-inline09">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-11" id="inlineRadioCarro" value="opcao2">
+            <label class="form-check-label" for="inlineRadioCarro">Carro</label>
+          </div>
+          <div class="form-check form-check-inline09">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-11" id="inlineRadioMaquinário" value="opcao3">
+            <label class="form-check-label" for="inlineRadioMaquinário">Maquinário</label>
+          </div>
+          <div class="form-check form-check-inline09">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-11" id="inlineRadioNão2" value="opcao4">
+            <label class="form-check-label" for="inlineNão2">Não</label>
+          </div>
+
+
+        </div>
+
+        <div class="input-12">
+          <label class="input-12" 
+                 for="inputSelect12">
+                 12 - Você costuma comprar pela internet?
+          </label>
+
+          <div class="form-check form-check-inline10">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-12" id="inlineRadioSim2" value="opcao1">
+            <label class="form-check-label" for="inlineRadioSim2">Sim</label>
+          </div>
+          <div class="form-check form-check-inline10">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-12" id="inlineRadioNão3" value="opcao2">
+            <label class="form-check-label" for="inlineRadioNão3">Não</label>
+          </div>
+        </div>
+    
+        <div class="input-13">
+          <label class="input-13" 
+                 for="inputSelect13">
+                 13- Com qual frequência costuma fazer essa compra por internet?
+          </label>
+          <!--Semanal () Quinzenal () Mensal () Semestral () Anual () Não utiliza ()-->
+          <div class="form-check form-check-inline11">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-13" id="inlineRadioSemanal" value="opcao1">
+            <label class="form-check-label" for="inlineRadioSemanal">Semanal</label>
+          </div>
+          <div class="form-check form-check-inline11">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-13" id="inlineRadioQuinzenal" value="opcao2">
+            <label class="form-check-label" for="inlineRadioQuinzenal">Quinzenal</label>
+          </div>
+          <div class="form-check form-check-inline11">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-13" id="inlineRadioMensal" value="opcao3">
+            <label class="form-check-label" for="inlineRadioMensal">Mensal</label>
+          </div>
+          <div class="form-check form-check-inline11">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-13" id="inlineRadioSemestral" value="opcao4">
+            <label class="form-check-label" for="inlineRadioSemestral">Semestral</label>
+          </div>
+          <div class="form-check form-check-inline11">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-13" id="inlineRadioAnual" value="opcao5">
+            <label class="form-check-label" for="inlineRadioAnual">Anual</label>
+          </div>
+          <div class="form-check form-check-inline11">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-13" id="inlineRadioNutiliza" value="opcao6">
+            <label class="form-check-label" for="inlineRadioNutiliza">Não utiliza</label>
+          </div>
+
+        <div class="input-14">
+          <label class="input-14" 
+                 for="inputSelect14">
+                 14 - Quais as 3 categorias que você mais compra na internet em uma ordem decrescente?
+          </label>
+          <br>
+          <select class="categorias00" id="categorias-00"required="required">
+            <option selected>1°Seleção </option>
+            <option value="1">Não utiliza</option>
+            <option value="2">Alimentos e Bebidas</option>
+            <option value="3">Bebê & Cia</option>
+            <option value="4">Construção e Ferramentas</option>
+            <option value="5">Informática</option>
+            <option value="6">Saúde</option>
+            <option value="7">Casa e Decoração</option>
+            <option value="8">Esporte e Lazer</option>
+            <option value="9">Eletrodomésticos</option>
+            <option value="10">Perfumaria e Cosméticos</option>
+            <option value="11">Telefonia</option>
+            <option value="12">Outros</option>
+        </select>
+        <select class="categorias01" id="categorias-01"required="required">
+          <option selected>2°Seleção </option>
+          <option value="1">Não utiliza</option>
+          <option value="2">Alimentos e Bebidas</option>
+          <option value="3">Bebê & Cia</option>
+          <option value="4">Construção e Ferramentas</option>
+          <option value="5">Informática</option>
+          <option value="6">Saúde</option>
+          <option value="7">Casa e Decoração</option>
+          <option value="8">Esporte e Lazer</option>
+          <option value="9">Eletrodomésticos</option>
+          <option value="10">Perfumaria e Cosméticos</option>
+          <option value="11">Telefonia</option>
+          <option value="12">Outros</option>
+        </select>
+        <select class="categorias02" id="categorias-02" required="required">
+          <option selected>3°Seleção </option>
+          <option value="1">Não utiliza</option>
+          <option value="2">Alimentos e Bebidas</option>
+          <option value="3">Bebê & Cia</option>
+          <option value="4">Construção e Ferramentas</option>
+          <option value="5">Informática</option>
+          <option value="6">Saúde</option>
+          <option value="7">Casa e Decoração</option>
+          <option value="8">Esporte e Lazer</option>
+          <option value="9">Eletrodomésticos</option>
+          <option value="10">Perfumaria e Cosméticos</option>
+          <option value="11">Telefonia</option>
+          <option value="12">Outros</option>
+        </select>
+            
+          
+        </div>
+        <div class="input-15">
+          <label class="input-15" 
+                 for="inputSelect15">
+                 15 - Você já teve um negócio próprio antes?
+          </label>
+          <div class="form-check form-check-inline15">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-15" id="inlineRadioSim15" value="opcao1">
+            <label class="form-check-label" for="inlineRadioSim15">Sim</label>
+          </div>
+          <div class="form-check form-check-inline15">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-15" id="inlineRadioNão15" value="opcao2">
+            <label class="form-check-label" for="inlineRadioNão15">Não</label>
+          </div>
+        </div>
+
+
+        <div class="input-16">
+          <label class="input-16" 
+                 for="inputSelect16">
+                 16 – Qual a sua ocupação de trabalho?
+          </label>
+          <!--
+            () Servidor Publico
+            () Autônomo
+            () Empregado de uma empresa privada
+            () Auxilio governamental/ bolsista
+            () Estudante
+            () Inativo/ desempregado
+          -->
+          <br>
+          <select class="categorias02" id="categorias-02" required="required" >
+            <option selected>Selecione sua ocupação... </option>
+            <option value="1">Servidor Publico</option>
+            <option value="2">Autônomo</option>
+            <option value="3">Empregado de uma empresa privada</option>
+            <option value="4">Auxilio governamental/ bolsista</option>
+            <option value="5">Estudante</option>
+            <option value="6">Inativo/ desempregado</option>
+          </select>
+        </div>
+
+
+        <div class="input-17">
+          <label class="input-17" 
+                 for="inputSelect17">
+                 17 – Qual método de pagamento que você mais utiliza
+          </label>
+          <!---
+               A vista em dinheiro() 
+               Cartão de crédito () 
+               Cartão de débito ()
+               PIX   () 
+               Fiado ()
+               Outro ()
+              -->
+          <div class="form-check form-check-inline17">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-17" id="inlineRadiovista" value="opcao1">
+            <label class="form-check-label" for="inlineRadiovista">A vista em dinheiro</label>
+          </div>
+          <div class="form-check form-check-inline17">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-17" id="inlineRadiocrédito" value="opcao2">
+            <label class="form-check-label" for="inlineRadiocrédito">Cartão de crédito</label>
+          </div>
+          <div class="form-check form-check-inline17">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-17" id="inlineRadioPIX"   value="opcao3">
+            <label class="form-check-label" for="inlineRadioPIX">PIX</label>
+          </div>
+          <div class="form-check form-check-inline17">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-17" id="inlineRadioFiado" value="opcao4">
+            <label class="form-check-label" for="inlineRadioFiado">Fiado</label>
+          </div>
+          <div class="form-check form-check-inline17">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-17" id="inlineRadioOutro17" value="opcao5">
+            <label class="form-check-label" for="inlineRadioOutro17">Outro</label>
+          </div>
+
+        </div>
+
+
+        <div class="input-18">
+          <label class="input-18" 
+                 for="inputSelect18">
+                 18 – Você viaja para fora da cidade de Apodi, se sim com que frequência:
+          </label>
+        </div>
+
+        <div class="input-19">
+          <label class="input-19" 
+                 for="inputSelect19">
+                 19 – SE a resposta anterior tiver sido SIM, pra qual cidade você costuma viajar com mais frequência, se NÃO coloque a resposta a baixo como “Não”!
+          </label>
+        </div>
+
+        <div class="input-20">
+          <label class="input-20" 
+                 for="inputSelect20">
+                 20 – Caso a questão 17 tenha sido positiva, qual o motivo dessa viagem?
+           </label>
+            <!---() Estudos
+                 () Lazer
+                 () Negócios
+                 () SÁUDE
+                 () Busca por serviços OU MERCADORIAS que não se encontram em Apodi
+                 () Outro motivo___________.-->
+                 
+        
+                  <div class="form-check form-check-inline21">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions-23" id="inlineRadioEstudos" value="Estudos">
+                    <label class="form-check-label" for="inlineRadioEstudos">Estudos</label>
+                  </div>
+                  <div class="form-check form-check-inline21">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions-23" id="inlineRadioLazer" value="Lazer">
+                    <label class="form-check-label" for="inlineRadioLazer">Lazer</label>
+                  </div>
+                  <div class="form-check form-check-inline21">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions-23" id="inlineRadioNegócios" value="Negócios">
+                    <label class="form-check-label" for="inlineRadioNegócios">Negócios</label>
+                  </div>
+                  <div class="form-check form-check-inline21">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions-23" id="inlineRadioSáude" value="Sáude">
+                    <label class="form-check-label" for="inlineRadioSáude">Sáude</label>
+                  </div>
+                  <div class="form-check form-check-inline21">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions-23" id="inlineRadioBusca" value="Busca">
+                    <label class="form-check-label" for="inlineRadioBusca">Busca por serviços OU MERCADORIAS que não se encontram em Apodi</label>
+                  </div>
+                  <div class="form-check form-check-inline21">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions-23" id="inlineRadioOutro23" value="Outro">
+                    <label class="form-check-label" for="inlineRadioOutro23">Outro motivo</label>
+                    <input type="text" name="inlineRadioOptions-23" id="inlineRadioOutro23">
+                  </div>
+
+                </div>
+
+        </div>
+
+        <div class="input-21">
+          <label class="input-21" 
+                 for="inputSelect21">
+                 21 – Tipo de moradia:
+          </label></br>
+          <select class="custom-select" id="moradia"required="required">
+            <option selected>Qual o tipo de moradia...</option>
+            <option value="1">Própria</option>
+            <option value="2">Alugada</option>
+            <option value="3">Vive com amigos/ familiares</option>
+          </select>
+        </div>
+        <div class="input-22">
+         <!-- () Mora sozinho
+              () De 1 a 3 pessoas
+              () De 4 a 6
+              () Mais de 6 -->
+          <label class="input-22" 
+                 for="inputSelect22">
+                 22 – Quantas pessoas moram na sua casa:
+          </label> </br>
+          <select class="custom-select" id=""required="required">
+            <option selected>Informe a quantidade de pessoas...</option>
+            <option value="1">Mora sozinho</option>
+            <option value="2">De 1 a 3 pessoas</option>
+            <option value="3">De 4 a 6 pessoas</option>
+            <option value="4">Mais de 6 pessoas</option>
+          </select>
+        </div>
+
+        <div class="input-23">
+          <label class="input-23" 
+                 for="inputSelect23">
+                 23 – Identificação das empresas:
+          </label>
+          <style>
+            table.indetificacao th {
+	          border-width: 3px;
+	          padding-left: 8px;
+            padding-right: 8px;
+	          border-style: outset/*solid*/;
+	          border-color: #f2f2f230;
+	          border-radius: 8px ;
+            }
+           
+          </style>
+          <script >
+            /***
+             *  Academia
+             *  Agencia de turismo
+             *  Agência/serviço bancário
+             *  Artigos para festa 
+             *  Auto escola
+             *  Açougue Estúdio 
+             *  Barbearia
+             *  Cantor / dupla /Banda 
+             *  Clinica estética
+             *  Clinica medica
+             *  Colégio particular
+             *  Comercio mais tempo de trabalho
+             *  Decoração de festa
+             *  Distribuidor água e gás 
+             *  Doceria / confeitaria
+             *  Emissora de Rádio 
+             *  Equipamento de Informática 
+             *  Escritório de advocacia
+             *  Escritório de contabilidade
+             *  Farmácia/Drogaria
+             *  fisioterapeuta 
+             *  Fotográfico
+             *  Hamburgueria/Lanchonete 
+             *  Hotel/ Pousada 
+             *  Laboratório de análises clínicas
+             *  Loja de Calçado 
+             *  Loja de cosméticos
+             *  Loja de móveis e eletrodomésticos
+             *  Loja de tecidos/cama, mesa e banho/ Utilidades para o lar
+             *  Loja Moda Íntima 
+             *  Madeireira 
+             *  Manutenção instalação refrigeração
+             *  Mármore /granito 
+             *  Mercadinho e mercearia 
+             *  Nutricionista 
+             *  Oficina mecânica e Peças 
+             *  Oficina mecânica e Peças automóvel
+             *  Ótica
+             *  Panificadora (padaria) 
+             *  Papelaria
+             *  Personal Traineer
+             *  Petshop 
+             *  Pizzaria 
+             *  Posto de combustível
+             *  produtos agropecuários 
+             *  Produtos esportivos 
+             *  Professor (a)
+             *  Provedor de internet
+             *  Psicólogo (a)
+             *  Rações 
+             *  Restaurante/Churrascaria
+             *  Salão de beleza feminino
+             *  Site de notícias
+             *  Supermercado 
+             *  Veterinário
+             *  Vidraçaria 
+             * 
+             **/
+              let Segmentos = [
+                  'Academia',
+                  'Agencia de turismo',
+                  'Agência/serviço bancário',
+                  'Artigos para festa ',
+                  'Auto escola',
+                  'Açougue Estúdio ',
+                  'Barbearia',
+                  'Cantor / dupla /Banda ',
+                  'Clinica estética',
+                  'Clinica medica',
+                  'Colégio particular',
+                  'Comercio mais tempo de trabalho',
+                  'Decoração de festa',
+                  'Distribuidor água e gás ',
+                  'Doceria / confeitaria',
+                  'Emissora de Rádio ',
+                  'Equipamento de Informática ',
+                  'Escritório de advocacia',
+                  'Escritório de contabilidade',
+                  'Farmácia/Drogaria',
+                  'Fisioterapeuta ',
+                  'Fotográfico',
+                  'Hamburgueria/Lanchonete ',
+                  'Hotel/ Pousada ',
+                  'Laboratório de análises clínicas',
+                  'Loja de Calçado',
+                  'Loja de cosméticos',
+                  'Loja de móveis e eletrodomésticos',
+                  'Loja de tecidos/cama, mesa e banho/ Utilidades para o lar',
+                  'Loja Moda Íntima',
+                  'Madeireira',
+                  'Manutenção instalação refrigeração',
+                  'Mármore /granito',
+                  'Mercadinho e mercearia',
+                  'Nutricionista',
+                  'Oficina mecânica e Peças',
+                  'Oficina mecânica e Peças automóvel',
+                  'Ótica',
+                  'Panificadora (padaria)',
+                  'Papelaria',
+                  'Personal Traineer',
+                  'Petshop',
+                  'Pizzaria',
+                  'Posto de combustível',
+                  'Produtos agropecuários',
+                  'Produtos esportivos',
+                  'Professor (a)',
+                  'Provedor de internet',
+                  'Psicólogo (a)',
+                  'Rações',
+                  'Restaurante/Churrascaria',
+                  'Salão de beleza feminino',
+                  'Site de notícias',
+                  'Supermercado',
+                  'Veterinário',
+                  'Vidraçaria'
+              ]
+              /*Segmentos.forEach(seg => {
+                console.log(seg)
+                
+              });
+                */
+             
+              function gerar(){
+                  let lista = document.getElementById('lista');
+                  for(var i = 0; i < Segmentos.length; i++){
+                      let item = document.createElement('tr');
+                      item.appendChild(document.createTextNode(Segmentos[i]));
+                      lista.appendChild(item);
+                    }
+                }
+          </script>
+          <table class="indetificacao" id="userTbl" bgcolor="#f1f1f1">
+            <tbody id="lista">
+              <tr bgcolor="#00a056"> 
+                <th><h4 style="color:white; text-shadow: 5px 5px 5px black;"> Segmento                 </h3></th>
+                <th><h4 style="color:white; text-shadow: 5px 5px 5px black;"> Resposta nome da empresa </h3></th>
+                <th><h4 style="color:white; text-shadow: 5px 5px 5px black;"> Acessibilidade           </h3></th>
+                <th><h4 style="color:white; text-shadow: 5px 5px 5px black;"> Atendimento              </h3></th>
+                <th><h4 style="color:white; text-shadow: 5px 5px 5px black;"> Forma de pagamento       </h3></th> 
+                <th><h4 style="color:white; text-shadow: 5px 5px 5px black;"> Preço                    </h3></th>  
+              </tr>
+              <tr >
+                <td>  </td>
+              
+              </tr> 
+            </tbody>
+          </table>
+        </div>
+        <script>gerar()</script>
+        
+       
+        <div class="input-24">
+          <label class="input-24" 
+                 for="inputSelect24">
+                 24 – Na sua opinião qual a maior fragilidade do comércio de Apodi, sua resposta pode abranger até 3 opções? (1,2,3)
+          </label>
+
+             <!---
+              1 Atendimento ()
+              2 Preço ()
+              3 Qualidade do produto/serviço ()
+              4 Divulgação ()
+              5 Variedade ()
+              6 Forma de pagamento ()
+              7 Acessibilidade ()
+              8 Falta de opções de produtos/ serviços ()
+              9 Outro ():_________
+             --->
+           
+            <!--<fieldset> --->
+              <table border="0" width="" cellspacing="0" cellpadding="0" align=center>
+                <tr bgcolor="#61d4bd" >
+                  <td>
+                  </td>
+                  <td >
+                    <b>Fragilidades</b>
+                  </td>
+                </tr>
+              <tr bgcolor="#f1f1f1" >
+                <td >
+                  <input type=checkbox name=ckb value=1 onclick='chkcontrol(0)';>
+                </td>
+                <td >Atendimento</td>
+              </tr>
+              <tr bgcolor="#ffffff" >
+                <td >
+                  <input type=checkbox name=ckb value=2 onclick='chkcontrol(1)';>
+                </td>
+                <td >Preço</td>
+              </tr>
+              <tr bgcolor="#f1f1f1"><td>
+                <input type=checkbox name=ckb value=3 onclick='chkcontrol(2)';>
+              </td>
+              <td >Qualidade do produto/serviço</td></tr>
+              <tr bgcolor="#ffffff" >
+                <td>
+                  <input type=checkbox name=ckb value=4 onclick='chkcontrol(3)';>
+                </td>
+              <td >Divulgação</td>
+              </tr>
+                <tr bgcolor="#f1f1f1" >
+                  <td>
+                    <input type=checkbox name=ckb value=5 onclick='chkcontrol(4)';>
+                  </td>
+                  <td >Variedade</td>
+                </tr>
+              <tr bgcolor="#ffffff" >
+                  <td>
+                    <input type=checkbox name=ckb value=6 onclick='chkcontrol(5)';>
+                  </td>
+                  <td >Forma de pagamento</td>
+                </tr>
+              <tr bgcolor="#f1f1f1" >
+                  <td>
+                    <input type=checkbox name=ckb value=7 onclick='chkcontrol(6)';>
+                  </td>
+                  <td >Acessibilidade</td>
+                </tr>
+                <tr bgcolor="#ffffff" >
+                  <td>
+                    <input type=checkbox name=ckb value=8 onclick='chkcontrol(7)';>
+                  </td>
+                  <td >Falta de opções de produtos/ serviços</td>
+                </tr>
+              <tr bgcolor="#f1f1f1" >
+                  <td>
+                    <input type=checkbox name=ckb value=9 onclick='chkcontrol(8)';>
+                  </td>
+                  <td >Outro</td>
+                </tr>
+                <!--<tr bgcolor="#ffffff" >
+                  <td>
+                    <input type=checkbox name=ckb value=6 onclick='chkcontrol(9)';>
+                  </td>
+                  <td >Forma de pagamento</td>
+                </tr>-->
+              </table>
+              <!--<div>
+                <input type = "checkbox" id = "Atendimento" name = "fragilidade" value = "Atendimento">
+                <label for = "Atendimento"> Atendimento </label>
+              </div>
+              <div>
+                <input type = "checkbox" id = "Preço" name = "fragilidade" value = "Preço">
+                <label for = "Preço"> Preço </label>
+              </div>
+              <div>
+                <input type = "checkbox" id = "Qualidade" name = "fragilidade" value = "Qualidade">
+                <label for = "Qualidade"> Qualidade do produto/serviço </label>
+              </div>
+              <div>
+                <input type = "checkbox" id = "Divulgação" name = "fragilidade" value = "Divulgação">
+                <label for = "Divulgação"> Divulgação </label>
+              </div>
+              <div>
+                <input type = "checkbox" id = "Variedade" name = "fragilidade" value = "Variedade">
+                <label for = "Variedade"> Variedade </label>
+              </div>
+              <div>
+                <input type = "checkbox" id = "Forma" name = "fragilidade" value = "Forma">
+                <label for = "Forma"> Forma de pagamento </label>
+              </div>
+              <div>
+                <input type = "checkbox" id = "Acessibilidade" name = "fragilidade" value = "Acessibilidade">
+                <label for = "Acessibilidade"> Acessibilidade </label>
+              </div>
+              <div>
+                <input type = "checkbox" id = "Falta" name = "fragilidade" value = "Falta">
+                <label for = "Falta"> Falta de opções de produtos/ serviços </label>
+              </div>
+              <div>
+                <input type = "checkbox" id = "Outro" name = "fragilidade" value = "Outro">
+                <label for = "Outro"> Outro </label> 
+                <input type="text" 
+                       name="fragilidade"  id="Outro" 
+                       placeholder="Digite outra opção...">
+              </div>
+          
+            </fieldset>-->
+
+          <!------>
+        </div>
+
+        <div class="input-25">
+          <label class="input-25" 
+                 for="inputSelect25">
+                 25 – Qual tipo de comercio/ serviço você acharia interessante que existisse em Apodi?
+          </label>
+        </br>
+        <textarea rows="2" cols="30" maxlength="100" class="form-control is-invalid" id="inputSelect25" placeholder="Informe um comercio ou serviço... " ></textarea>        </div>
+
+        <div class="input-26">
+          <label class="input-26" 
+                 for="inputSelect26">
+                 26 – Qual tipo de comercio/SERVIÇO você acha que já está saturado na cidade?
+          </label>
+        </br>
+        
+        <textarea rows="2" cols="30" maxlength="30" class="form-control is-invalid" id="inputSelect26" placeholder="Informe um comercio ou serviço... " ></textarea>
+        </div>
+        <div class="input-27" >
+          <label class="input-27" 
+                 for="inputSelect27">
+                 27 – Deixe sua sugestão. Algum comentário para o comércio apodiense?
+          </label> 
+            </br>
+            <textarea rows="2" cols="30" maxlength="30" class="form-control is-invalid" id="inputSelect27" placeholder="Digite sua sugestão... " ></textarea>
+        </div>
+        <input class="salvar" type="submit" value="Salva" align="center">
+      
+    </form>
+    
+  </div>
+</section>
+</div>
+</body>
+</html>
+
+
+<!--
+<html>
+<head>
+<title></title>
+<META NAME="DESCRIPTION" CONTENT="">
+<META NAME="KEYWORDS" CONTENT="">
+
+  <script type="text/javascript">
+    function chkcontrol(j) {
+          var total=0;
+          for(var i=0; i < document.form1.ckb.length; i++){
+            if(document.form1.ckb[i].checked){
+              total =total +1;
+            }
+            if(total > 3){
+                alert("Selecione apenas três") 
+                document.form1.ckb[j].checked = false ;
+                return false;
+            }
+          }
+      } 
+  </script>
+</head>
+
+<body  topmargin="0";  >
+
+	 <form name=form1 method=post action=check.php>
+      <table border="0" width="250" cellspacing="0" cellpadding="0" align=center>
+        <tr bgcolor="#61d4bd" >
+          <td>
+          </td>
+          <td >
+            <b>Choice</b>
+          </td>
+        </tr>
+      <tr bgcolor="#f1f1f1" >
+        <td >
+          <input type=checkbox name=ckb value=1 onclick='chkcontrol(0)';>
+        </td>
+        <td >PHP</td>
+      </tr>
+      <tr bgcolor="#ffffff" >
+        <td >
+          <input type=checkbox name=ckb value=2 onclick='chkcontrol(1)';>
+        </td>
+        <td >Perl</td>
+      </tr>
+      <tr bgcolor="#f1f1f1"><td>
+        <input type=checkbox name=ckb value=3 onclick='chkcontrol(2)';>
+      </td>
+      <td >MySQL</td></tr>
+      <tr bgcolor="#ffffff" >
+        <td>
+          <input type=checkbox name=ckb value=4 onclick='chkcontrol(3)';>
+        </td>
+      <td >ASP</td>
+      </tr>
+        <tr bgcolor="#f1f1f1" >
+          <td>
+            <input type=checkbox name=ckb value=5 onclick='chkcontrol(4)';>
+          </td>
+          <td >JavaScript</td>
+        </tr>
+</table>
+</form>
+</body>
+</html>-->
