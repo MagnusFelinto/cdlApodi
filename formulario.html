@@ -28,15 +28,59 @@
   <style>
    section.sec div.container{
     margin-left:5%;
+    margin-right:5%;
    }
    .form1 .salvar{
     margin-left: 48%;
    }
-
+   
   </style>
+  
 </head>
 
 <body>
+  <script>
+    function seleciona(name, indice) {
+   var imgs = document.querySelectorAll('img[name=' + name + ']');
+  
+   for (var i=0; i < imgs.length; i++) {
+       if (i <= indice)
+           imgs[i].className = "destaque";
+       else
+           imgs[i].className = "apagada";
+   }
+}
+
+window.onload = function() {
+   var imgs = document.querySelectorAll('img[name=fb]');
+  
+   for (var i=0; i < imgs.length; i++) {
+       (function(name, i) {
+          imgs[i].addEventListener('click', function () {
+              seleciona(name, i);
+          });
+       })(imgs[i].name, i);
+   }
+}
+  </script>
+  
+  <style>
+    
+    .apagada {
+  background-image: url('http://www.biblecast.net.br/resources/estrela-prata.png');
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.destaque {
+  background-image: url('http://www.biblecast.net.br/resources/estrela.png');
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+  </style>
+  
   <section class="sec" >
   <div class="container1" >
   </div> 
@@ -480,15 +524,31 @@
             () Inativo/ desempregado
           -->
           <br>
-          <select class="categorias02" id="categorias-02" required="required" >
-            <option selected>Selecione sua ocupação... </option>
-            <option value="1">Servidor Publico</option>
-            <option value="2">Autônomo</option>
-            <option value="3">Empregado de uma empresa privada</option>
-            <option value="4">Auxilio governamental/ bolsista</option>
-            <option value="5">Estudante</option>
-            <option value="6">Inativo/ desempregado</option>
-          </select>
+          <div class="form-check form-check-inline16">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-16" id="inlineRadioServidorPublico" value="opcao1">
+            <label class="form-check-label" for="inlineRadioServidorPublico">Servidor Publico</label>
+          </div>
+          <div class="form-check form-check-inline16">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-16" id="inlineRadioAutônomo" value="opcao2">
+            <label class="form-check-label" for="inlineRadioAutônomo">Autônomo</label>
+          </div>
+          <div class="form-check form-check-inline16">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions-16" id="inlineRadioEmpregado"   value="opcao3">
+            <label class="form-check-label" for="inlineRadioEmpregado">Empregado de uma empresa privada</label>
+          </div>
+          <div class="form-check form-check-inline16">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-16" id="inlineRadioAuxilio" value="opcao4">
+            <label class="form-check-label" for="inlineRadioAuxilio">Auxilio governamental/ bolsista</label>
+          </div>
+          <div class="form-check form-check-inline16">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-16" id="inlineRadioEstudante" value="opcao5">
+            <label class="form-check-label" for="inlineRadioEstudante">Estudante</label>
+          </div>
+          <div class="form-check form-check-inline16">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-16" id="inlineRadiodesempregado" value="opcao6">
+            <label class="form-check-label" for="inlineRadiodesempregado">Inativo/ desempregado</label>
+          </div>
+
         </div>
 
 
@@ -534,13 +594,56 @@
                  for="inputSelect18">
                  18 – Você viaja para fora da cidade de Apodi, se sim com que frequência:
           </label>
+              <!--
+                  () Sim, diariamente
+                  () Sim, pelo menos uma vez por semana
+                  () Sim, pelo menos uma vez por mês
+                  () Sim, de 6 em 6 meses
+                  () Sim, 1 vez por ano
+                  () Não viajo há muito tempo
+                -->
+                <div class="form-check form-check-inline18">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions-18" id="inlineRadiodiariamente" value="opcao1">
+                  <label class="form-check-label" for="inlineRadiodiariamente">Sim, diariamente</label>
+                </div>
+                <div class="form-check form-check-inline18">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions-18" id="inlineRadioporsemana" value="opcao2">
+                  <label class="form-check-label" for="inlineRadioporsemana">Sim, pelo menos uma vez por semana</label>
+                </div>
+                <div class="form-check form-check-inline18">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions-18" id="inlineRadio1mes"   value="opcao3">
+                  <label class="form-check-label" for="inlineRadio1mes">Sim, pelo menos uma vez por mês</label>
+                </div>
+                <div class="form-check form-check-inline18">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions-18" id="inlineRadio6meses" value="opcao4">
+                  <label class="form-check-label" for="inlineRadio6meses">Sim, de 6 em 6 meses</label>
+                </div>
+                <div class="form-check form-check-inline18">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions-18" id="inlineRadioano" value="opcao5">
+                  <label class="form-check-label" for="inlineRadioano">Sim, 1 vez por ano</label>
+                </div>
+                <div class="form-check form-check-inline18">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions-18" id="inlineRadioNaoviajo" value="opcao6">
+                  <label class="form-check-label" for="inlineRadioNaoviajo">Não viajo há muito tempo</label>
+                </div>
+                
+
         </div>
+        
 
         <div class="input-19">
           <label class="input-19" 
                  for="inputSelect19">
                  19 – SE a resposta anterior tiver sido SIM, pra qual cidade você costuma viajar com mais frequência, se NÃO coloque a resposta a baixo como “Não”!
           </label>
+          <div class="form-check form-check-inline19">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-19" id="inlineRadioSim19" value="opcao1">
+            <label class="form-check-label" for="inlineRadioSim19">Sim</label><input type="text" name="inlineRadioOptions-19" id="inlineRadioSim19">
+          </div>
+          <div class="form-check form-check-inline19">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-19" id="inlineRadioNão19" value="opcao2">
+            <label class="form-check-label" for="inlineRadioNão19">Não</label>
+          </div>
         </div>
 
         <div class="input-20">
@@ -583,7 +686,6 @@
                   </div>
 
                 </div>
-
         </div>
 
         <div class="input-21">
@@ -591,12 +693,21 @@
                  for="inputSelect21">
                  21 – Tipo de moradia:
           </label></br>
-          <select class="custom-select" id="moradia"required="required">
-            <option selected>Qual o tipo de moradia...</option>
-            <option value="1">Própria</option>
-            <option value="2">Alugada</option>
-            <option value="3">Vive com amigos/ familiares</option>
-          </select>
+          <!--() Própria
+              () Alugada
+              () Vive com amigos/ familiares-->
+          <div class="form-check form-check-inline21">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-21" id="inlineRadioPrópria"   value="1">
+            <label class="form-check-label" for="inlineRadioPrópria">Própria</label>
+          </div>
+          <div class="form-check form-check-inline21">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-21" id="inlineRadioAlugada"    value="2">
+            <label class="form-check-label" for="inlineRadioAlugada">Alugada</label>
+          </div>
+          <div class="form-check form-check-inline21">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-21" id="inlineRadiofamiliares" value="3">
+            <label class="form-check-label" for="inlineRadiofamiliares">Vive com amigos/ familiares</label>
+          </div>
         </div>
         <div class="input-22">
          <!-- () Mora sozinho
@@ -607,22 +718,38 @@
                  for="inputSelect22">
                  22 – Quantas pessoas moram na sua casa:
           </label> </br>
-          <select class="custom-select" id=""required="required">
-            <option selected>Informe a quantidade de pessoas...</option>
-            <option value="1">Mora sozinho</option>
-            <option value="2">De 1 a 3 pessoas</option>
-            <option value="3">De 4 a 6 pessoas</option>
-            <option value="4">Mais de 6 pessoas</option>
-          </select>
+          <div class="form-check form-check-inline22">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-22" id="inlineRadiosozinho" value="1">
+            <label class="form-check-label" for="inlineRadiosozinho">Mora sozinho</label>
+          </div>
+          <div class="form-check form-check-inline22">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-22" id="inlineRadioDe1a3" value="2">
+            <label class="form-check-label" for="inlineRadioDe1a3">De 1 a 3 pessoas</label>
+          </div>
+          <div class="form-check form-check-inline22">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-22" id="inlineRadioDe4a6" value="3">
+            <label class="form-check-label" for="inlineRadioDe4a6">De 4 a 6 pessoas</label>
+          </div>
+          <div class="form-check form-check-inline22">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions-22" id="inlineRadioMaisde6" value="4">
+            <label class="form-check-label" for="inlineRadioMaisde6">Mais de 6 pessoas</label>
+          </div>
         </div>
-
         <div class="input-23">
           <label class="input-23" 
                  for="inputSelect23">
                  23 – Identificação das empresas:
           </label>
           <style>
-            table.indetificacao th {
+            table.indetificacao{
+              border-radius: 20px ;
+              border: 5px ;
+             border-style: solid;/*outset/**/
+	           border-color: #15111130;
+             padding-left: 4px;
+             padding-right: 4px;
+            }
+            table.indetificacao th  {
 	          border-width: 3px;
 	          padding-left: 8px;
             padding-right: 8px;
@@ -630,7 +757,6 @@
 	          border-color: #f2f2f230;
 	          border-radius: 8px ;
             }
-           
           </style>
           <script >
             /***
@@ -690,7 +816,7 @@
              *  Supermercado 
              *  Veterinário
              *  Vidraçaria 
-             * 
+             *
              **/
               let Segmentos = [
                   'Academia',
@@ -752,37 +878,165 @@
               ]
               /*Segmentos.forEach(seg => {
                 console.log(seg)
-                
+
               });
                 */
-             
+               /* var t = document.querySelector("#lista");
+                var x = document.createElement('tr');
+                x.setAttribute("id", "azul"); //adicionar o atributo id com o valor azul
+                x.setAttribute("class", "bloco"); //adicionar o atributo class com o valor bloco
+                t.appendChild(x);
+                
+               */
+              
               function gerar(){
-                  let lista = document.getElementById('lista');
+                  let lista  = document.getElementById('lista');
+                 
                   for(var i = 0; i < Segmentos.length; i++){
-                      let item = document.createElement('tr');
-                      item.appendChild(document.createTextNode(Segmentos[i]));
-                      lista.appendChild(item);
+                      let item  = document.createElement('tr');
+                      var texto = "d"+i.toString();
+                      
+                      if(i%2==0){
+                        
+                        item.setAttribute("class", texto );
+                        item.setAttribute("id", texto);
+                        lista.appendChild(item);
+                        let lista1  = document.getElementById(texto);
+                      }
+                      else{
+                        item.setAttribute("class", texto);
+                        item.setAttribute("id", texto);
+                        lista.appendChild(item);
+                        let lista1  = document.getElementById(texto);
+                      }
+                      for(var j=0; j< 6; j++){
+                        if(j==0){
+                          let item0   = document.createElement('h3');
+                          item0.appendChild(document.createTextNode(Segmentos[i]));
+                          lista.appendChild(item0);
+                          var texto = 'coluna-'+j.toString();
+                          item.setAttribute("class", texto );
+                          item.setAttribute("id", texto);
+                       
+                        }
+                        else if(j==1){
+                        
+                          let item  = document.createElement('td');
+                          item.appendChild(document.createTextNode(Segmentos[i]));
+                          lista.appendChild(item);
+                          var texto = 'coluna-'+j.toString();
+                          item.setAttribute("class", texto );
+                          item.setAttribute("id", texto);
+                        }
+                        else if(j==2){
+                    
+                          let item  = document.createElement('td');
+                          item.appendChild(document.createTextNode(Segmentos[i]));
+                          lista.appendChild(item);
+                          var texto = 'coluna-'+j.toString()+'-'+i.toString();
+                          item.setAttribute("class", texto );
+                          item.setAttribute("id", texto);
+                          
+                    
+                        }
+                        else if(j==3){
+                          let item  = document.createElement('td');
+                          item.appendChild(document.createTextNode(Segmentos[i]));
+                          lista.appendChild(item);
+                          var texto = 'coluna-'+j.toString();
+                          item.setAttribute("class", texto );
+                          item.setAttribute("id", texto);
+                        }
+                        else if(j==4){
+                          let item  = document.createElement('td');
+                          item.appendChild(document.createTextNode(Segmentos[i]));
+                          lista.appendChild(item);
+                          var texto = 'coluna-'+j.toString();
+                          item.setAttribute("class", texto );
+                          item.setAttribute("id", texto);
+                        }
+                        else if(j==5){
+                          let item  = document.createElement('td');
+                          item.appendChild(document.createTextNode(Segmentos[i]));
+                          lista.appendChild(item);
+                          var texto = 'coluna-'+j.toString();
+                          item.setAttribute("class", texto );
+                          item.setAttribute("id", texto);
+                        }
+                        else{
+                          let item  = document.createElement('td');
+                          item.appendChild(document.createTextNode(Segmentos[i]));
+                          lista.appendChild(item);
+                        }               
+
+                      }
+                           
                     }
                 }
+                   /* <label>
+                  <img name="fb" class="apagada"/>
+                </label>
+                <label>
+                    <img name="fb" class="apagada"/>
+                </label>
+                <label>
+                    <img name="fb" class="apagada"/>
+                </label>
+                <label>
+                    <img name="fb" class="apagada"/>
+                </label>
+                <label>
+                    <img name="fb" class="apagada"/>
+                </label>
+                */
+                function gerar2(){
+                  for(var i = 0; i < Segmentos.length; i++){
+                      let item  = document.createElement('label');
+                      var texto = "d"+i.toString();
+                      for(var j=0; j< 6; j++){
+                        let lista1  = document.getElementById('coluna-'+i.toString()+'-'+j.toString());
+                        if(i==0){
+                            item.setAttribute("class", texto );
+                            item.setAttribute("id", texto);
+                            item.appendChild(document.createTextNode('Segmentos[i]'));
+                            lista1.appendChild(item);
+                        }
+                        else{
+                          item.setAttribute("class", texto );
+                          item.setAttribute("id", texto);
+                          item.appendChild(document.createTextNode('Segmentos[i]'));
+                          ista1.appendChild(item);
+                        }
+                    }
+                  }
+              }
+
+
+                
           </script>
-          <table class="indetificacao" id="userTbl" bgcolor="#f1f1f1">
+          <style>
+            #lista #d1 td{
+              background-color: blue;
+              color: yellowgreen;
+            }
+          </style>
+          <table class="indetificacao" id="userTbl" ><!--bgcolor="#f1f1f1">-->
             <tbody id="lista">
               <tr bgcolor="#00a056"> 
                 <th><h4 style="color:white; text-shadow: 5px 5px 5px black;"> Segmento                 </h3></th>
-                <th><h4 style="color:white; text-shadow: 5px 5px 5px black;"> Resposta nome da empresa </h3></th>
+                <th><h4 style="color:white; text-shadow: 5px 5px 5px black;"> Nome da empresa          </h3></th>
                 <th><h4 style="color:white; text-shadow: 5px 5px 5px black;"> Acessibilidade           </h3></th>
                 <th><h4 style="color:white; text-shadow: 5px 5px 5px black;"> Atendimento              </h3></th>
                 <th><h4 style="color:white; text-shadow: 5px 5px 5px black;"> Forma de pagamento       </h3></th> 
                 <th><h4 style="color:white; text-shadow: 5px 5px 5px black;"> Preço                    </h3></th>  
               </tr>
-              <tr >
-                <td>  </td>
-              
+              <tr>              
               </tr> 
             </tbody>
           </table>
+       
         </div>
-        <script>gerar()</script>
+        <script>gerar();gerar2()</script>
         
        
         <div class="input-24">
