@@ -1,0 +1,30 @@
+{
+
+    "name":"magnusfelinto/appcdlapodi",
+    "description":"Criando uma app de formulario para CDL de Apodi",
+    "minimum-stability":"stable",
+    "license":"proprietary",
+    "authors":[{
+        "name": "Magnus Felinto",
+        "email": "magnusfelito@gmail.com",
+        "role": "Developer"
+            }
+        ],
+        "config": {
+            "vendor-dir": "vendor"
+    
+        },
+        "autoload": {
+            "psr-4": {
+                "Source\\":"source/"
+            },
+            "files": [
+                "source/Config.php"
+            ]
+        },
+        "require": {
+            "caffeecode/datalayer":"1.1.*",
+            "legue/csv":"9.3.*"
+        }
+     
+    }
