@@ -23,8 +23,9 @@
             ]
         },
         "require": {
-            "caffeecode/datalayer":"1.1.*",
-            "legue/csv":"9.3.*"
-        }
+            "league/csv":"9.3.*",
+            "google/apiclient": "^2.12"
+            
+        } 
      
     }
