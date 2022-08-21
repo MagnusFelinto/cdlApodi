@@ -1,17 +1,17 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="pt-BR">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/custom.css"/>
+ 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <title>Formulario de pesquisa</title>
-  <?php if(!session_id()) session_start();    ?>
+ 
     <script type="text/javascript">
       var valor = '';
       function chkcontrol(j, v) {
@@ -191,9 +191,20 @@
   </style>
 
   <style>
+    .scroll {
+      
+        
+           
+            width: 85%;
+            height: 100%;
+            overflow-y: scroll;
+            overflow-x: scroll;
+        }
+
     section.sec div.container{
-      margin-left:5%;
-      margin-right:5%;
+      padding-left:5%;
+      padding-right:5%;
+      
     }
     .espaco-20px{
       margin-top: 20px;
@@ -312,9 +323,8 @@
   <body >
 
 
-  <?php
+  
 
-  ?>
     <script>
       
            
@@ -366,9 +376,13 @@
       
           }
           body{
-            background-image: linear-gradient(120deg,  #c0c0c0,#dedec6,white);
-          }
+            background-image: url("assets/background-white4.jpg");
+          
+            background-attachment: fixed;
 
+          }
+          
+       
     select{
         font-weight: 400;
         font-size:12pt;
@@ -380,66 +394,65 @@
       position: absolute;
       right: 2%;
     }
+    .sair{
+      position: absolute;
+      margin-left:  2%;
+      margin-top:   1%;
+      margin-bottom:1%;
+    }
+ 
+    .cab{
+     /* box-sizing: border-box;*/
+      position: relative;
+      width: 100%;
+      padding-top:2% ;
+      padding-bottom:2% ;
+      background: linear-gradient(178.6deg, #3300FF -19.96%, #00A056 6.5%);
+      border: 1px solid #000000;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 0px 0px 62px 62px;
+    }
+    img.form{
+      display: block;
+      margin-left: auto;
+      margin-right: auto ;
+    }
+    h3{
+      font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;   
+    }
     </style>
-    
+
+    <div class="cab" >
+        <a href="auth.php"type="button" class="sair">
+            <img class="back" src="assets/back.png" alt="">
+        </a>
+        <img class="form" src="assets/form.png" alt="">
+        <!--
+        <div align="center">
+          <h2 >📝PRÊMIO MÉRITO EMPREENDEDOR</h2>
+        </div>-->
+    </div>
+  
     <section class="sec" >
-    <div class="container1" >
-    
-      <h1 >TITULO DO FORMULARIO</h1>
-      <h3 class="saida" align="right"> <?php
-            if(!empty($_SESSION['dados'])){
-
-                echo 'Ola '.$_SESSION['dados']['user']; 
-              
-            
-            } ?>
-      </h3>
-    <!------------------------------------------------------------>\
-    <div class="ld-user-menu">
-						<span class="ld-text ld-user-welcome-text">
-            <?php
-            if(!empty($_SESSION['dados'])){
-
-                echo 'Ola '.$_SESSION['dados']['user']; 
-              
-            
-            } ?>			</span>
-
-			<span class="ld-profile-avatar">
-				<img alt="" src="assets/cdlapodi.png" srcset="assets/cdlapodi.png 2x" class="avatar avatar-96 photo" height="96" width="96" loading="lazy">			</span> <!--/.ld-profile-avatar-->
-
-			
-			<span class="ld-user-menu-items">
-										<a href="https://curso.guilhermegulias.com/courses/1-temporada/">Lobby</a>
-												<a href="https://curso.guilhermegulias.com/logout/?redirect_to=https%3A%2F%2Fcurso.guilhermegulias.com%2Fcourses%2F1-temporada%2F&amp;_wpnonce=92cf4e20c0">Sair</a>
-									</span> <!--/.ld-user-menu-items-->
-
-			
-		</div>
-
-
-
-
-
-
-
-
-
-      <!----------------------------------------------------------->
-    </div> 
+    </br>
+ 
     <div class="container" >
 
       <form class="form1 autocomplete" method="POST" action="CadastraForm.php" name=form1 autocomplete="off" >
         <div class="input-01">
-          <label class="input-01 centro" 
+          <label class="input-01 " 
               for="inputSelect01">
               <h3>1  - Dados de Identificação dos Entrevistados</h3>
           </label>
+          </br>
           <input class="campoSelecao" type="radio" name="area" value="Area Urbana" onclick="div(false)" required />
           <label>Area Urbana</label>
           <input class="campoSelecao" type="radio" name="area" value="Area Rural"  onclick="div(true)"  required/>
           <label>Area Rural</label>  
-    </br>
+     </br>
     </br> 
         <div class="autocomplete" id="visibilidade0" style="display:none;" autocomplete="on">
         <td autocomplete="on">  
@@ -826,7 +839,7 @@
                for="inputSelect14">
                <h3>14 - Quais as 3 categorias que você mais compra na internet em uma ordem decrescente?</h3>
         </label>
-       
+        </br>
         <select class="categorias00" id="categorias-00" name="inputSelect14-00" required="required">
           <option selected>1°Seleção </option>
           <option value="Não utiliza">Não utiliza</option>
@@ -1074,9 +1087,11 @@
                for="inputSelect21">
                <h3>21 – Tipo de moradia:</h3>
         </label>
-        <!--() Própria
+        <!--
+            () Própria
             () Alugada
-            () Vive com amigos/ familiares-->
+            () Vive com amigos/ familiares 
+        -->
         <div class="form-check form-check-inline21">
           <input class="form-check-input" type="radio" name="inlineRadioOptions-21" id="inlineRadioPrópria"   value="Própria"required>
           <label class="form-check-label" for="inlineRadioPrópria">Própria</label>
@@ -1094,7 +1109,8 @@
        <!-- () Mora sozinho
             () De 1 a 3 pessoas
             () De 4 a 6
-            () Mais de 6 -->
+            () Mais de 6 
+        -->
         <label class="input-22" 
                for="inputSelect22">
                <h3>22 – Quantas pessoas moram na sua casa:</h3>
@@ -1120,7 +1136,7 @@
 <!--------------------------------------------------------------------------------------------------------------------->
 <!----------------------------------------------------------------------------------------------------------------->
 
-   <div class="input-23">
+   <div class="input-23 scroll">
         <label class="input-23" for="inputSelect23">
               <h3> 23 – Identificação das empresas:</h3>
         </label>
@@ -1144,136 +1160,12 @@
           }
         </style>
 <script >
-/***************************************************************************************/
-/* 
-Google Drive API:
-Demonstration to:
-1. upload 
-2. delete 
-3. create public URL of a file.
-required npm package: googleapis
-*
-const { google } = require('googleapis');
-const path = require('path');
-const fs = require('fs');
 
-const CLIENT_ID = '86333617804-q8sm4mgkk6v19m8nglfr01lo173e0d2o.apps.googleusercontent.com';
-const CLIENT_SECRET = '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';
-const REDIRECT_URI = 'https://developers.google.com/oauthplayground';
-
-const REFRESH_TOKEN = '1//04n2RDCYn_E6fCgYIARAAGAQSNwF-L9IrwztjzQvzvtSqIXQTHyqolK6ITEa_aDu6_ioYEqji24kHvprtzFNOaYmLzD3yToQkHTA';
-
-const oauth2Client = new google.auth.OAuth2(
-  CLIENT_ID,
-  CLIENT_SECRET,
-  REDIRECT_URI
-);
-
-oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
-
-const drive = google.drive({
-  version: 'v3',
-  auth: oauth2Client,
-});
-/* 
-caminho do arquivo que precisa ser carregado
-Nota: Supõe-se que o arquivo example.jpg esteja no diretório raiz,
-embora isso possa ser qualquer filePath
-*
-const filePath = path.join(__dirname, 'dados/perguntas.csv');//text/csv
-
-async function uploadFile() {
-  try {
-    const response = await drive.files.create({
-      requestBody: {
-        name: 'perguntas.csv', //Este pode ser o nome de sua escolha //text/csv
-        mimeType: 'text/csv',//text/csv
-      },
-      media: {
-        mimeType: 'text/csv', //text/csv
-        body: fs.createReadStream(filePath),
-      },
-    });
-
-    console.log(response.data);
-  } catch (error) {
-    console.log(error.message);
-  }
-}
-
-
-//uploadFile();
-const filePath2 = path.join(__dirname, 'dados/tabela.csv');//text/csv
-
-async function uploadFile2() {
-  try {
-    const response2 = await drive.files.create({
-      requestBody: {
-        name: 'tabela.csv', //Este pode ser o nome de sua escolha //text/csv
-        mimeType: 'text/csv',//text/csv
-      },
-      media: {
-        mimeType: 'text/csv', //text/csv
-        body: fs.createReadStream(filePath2),
-      },
-    });
-
-    console.log(response.data2);
-  } catch (error) {
-    console.log(error.message);
-  }
-}
-
-/*function sincronizar(){
-  uploadFile();
-  uploadFile2();
-}
-*
-//uploadFile2();
-
-async function deleteFile() {
-  try {
-    const response = await drive.files.delete({
-      fileId: 'YOUR FILE ID',
-    });
-    console.log(response.data, response.status);
-  } catch (error) {
-    console.log(error.message);
-  }
-}
-
-// deleteFile();
-
-async function generatePublicUrl() {
-  try {
-    const fileId = 'YOUR FILE ID';
-    await drive.permissions.create({
-      fileId: fileId,
-      requestBody: {
-        role: 'reader',
-        type: 'anyone',
-      },
-    });
-
-    /* 
-    webViewLink: View the file in browser
-    webContentLink: Direct download link 
-    *
-    const result = await drive.files.get({
-      fileId: fileId,
-      fields: 'webViewLink, webContentLink',
-    });
-    console.log(result.data);
-  } catch (error) {
-    console.log(error.message);
-  }
-}
-/****************************************************************************************/
 function autocomplete(inp, arr) {
-  /*the autocomplete function takes two arguments,
-  the text field element and an array of possible autocompleted values:*/
+  /* The autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values: */
   var currentFocus;
-  /*execute a function when someone writes in the text field:*/
+  /* execute a function when someone writes in the text field:*/
   inp.addEventListener("input", function(e) {
       var a, b, i, val = this.value;
       /*close any already open lists of autocompleted values*/
@@ -1404,6 +1296,7 @@ function gerar(){
             }  
             gerar()  ;
 </script>
+
 <table class="indetificacao" id="userTbl" autocomplete="on"><tbody id="lista" class="lista">
   <tr bgcolor="#00a056"> 
   <th>
@@ -2110,7 +2003,7 @@ function gerar(){
                     </td>
                       <td class="coluna-24-4" id="coluna-24-4">
                          <span class="star-rating">
-                       <input type="radio" name="rating-24-4" value="1"
+                       <input type="radio" name="rating-24-4" value="1">
                        <i>
                         
                        </i>
@@ -2234,7 +2127,8 @@ function gerar(){
                   <i>
                     
                   </i>
-                </span></td>
+                </span>
+              </td>
                   <td class="coluna-35-4" id="coluna-35-4">
                     <span class="star-rating">
                      <input type="radio" name="rating-35-4" value="1"><i></i> <input type="radio" name="rating-35-4" value="2"><i></i> <input type="radio" name="rating-35-4" value="3"><i></i><input type="radio" name="rating-35-4" value="4"><i></i><input type="radio" name="rating-35-4" value="5"><i></i></span></td><td class="coluna-35-5" id="coluna-35-5"> <span class="star-rating"> <input type="radio" name="rating-35-5" value="1"><i></i> <input type="radio" name="rating-35-5" value="2"><i></i> <input type="radio" name="rating-35-5" value="3"><i></i><input type="radio" name="rating-35-5" value="4"><i></i><input type="radio" name="rating-35-5" value="5"><i></i></span></td></tr><tr class="d36" id="d36"><td><h3 class="coluna-36-0" id="coluna-36-0"> Oficina mecânica e Peças automóvel</h3></td><td class="coluna-36-1" id="coluna-36-1"><div class="autocomplete" style="width:300px;" id="autocomplete36" <="" div="">
@@ -2260,7 +2154,8 @@ function gerar(){
                   <i></i> <input type="radio" name="rating-52-5" value="2"><i></i> <input type="radio" name="rating-52-5" value="3"><i></i><input type="radio" name="rating-52-5" value="4"><i></i><input type="radio" name="rating-52-5" value="5"><i></i></span></td></tr><tr class="d53" id="d53"><td><h3 class="coluna-53-0" id="coluna-53-0"> Supermercado</h3></td><td class="coluna-53-1" id="coluna-53-1"><div class="autocomplete" style="width:300px;" id="autocomplete53">
                   <input class="myInput53"  name="myInput53" id="myInput53" style="width:200px" placeholder="Digite aqui o texto"></div></td><td class="coluna-53-2" id="coluna-53-2"> <span class="star-rating"> <input type="radio" name="rating-53-2" value="1"><i></i> <input type="radio" name="rating-53-2" value="2"><i></i> <input type="radio" name="rating-53-2" value="3"><i></i><input type="radio" name="rating-53-2" value="4"><i></i><input type="radio" name="rating-53-2" value="5"><i></i></span></td><td class="coluna-53-3" id="coluna-53-3"> <span class="star-rating"> <input type="radio" name="rating-53-3" value="1"><i></i> <input type="radio" name="rating-53-3" value="2"><i></i> <input type="radio" name="rating-53-3" value="3"><i></i><input type="radio" name="rating-53-3" value="4"><i></i><input type="radio" name="rating-53-3" value="5"><i></i></span></td><td class="coluna-53-4" id="coluna-53-4"> <span class="star-rating"> <input type="radio" name="rating-53-4" value="1"><i></i> <input type="radio" name="rating-53-4" value="2"><i></i> <input type="radio" name="rating-53-4" value="3"><i></i><input type="radio" name="rating-53-4" value="4"><i></i>
                   <input type="radio" name="rating-53-4" value="5"><i></i></span></td><td class="coluna-53-5" id="coluna-53-5"> <span class="star-rating"> <input type="radio" name="rating-53-5" value="1"><i></i> <input type="radio" name="rating-53-5" value="2"><i></i> <input type="radio" name="rating-53-5" value="3"><i></i><input type="radio" name="rating-53-5" value="4"><i></i><input type="radio" name="rating-53-5" value="5"><i></i></span></td></tr><tr class="d54" id="d54"><td><h3 class="coluna-54-0" id="coluna-54-0"> Veterinário</h3></td><td class="coluna-54-1" id="coluna-54-1"><div class="autocomplete" style="width:300px;" id="autocomplete54">
-                  <input class="myInput54"  name="myInput54" id="myInput54" style="width:200px" placeholder="Digite aqui o texto"></div></td><td class="coluna-54-2" id="coluna-54-2"> <span class="star-rating"> <input type="radio" name="rating-54-2" value="1"><i></i> <input type="radio" name="rating-54-2" value="2"><i></i> <input type="radio" name="rating-54-2" value="3"><i></i><input type="radio" name="rating-54-2" value="4"><i></i><input type="radio" name="rating-54-2" value="5"><i></i></span></td><td class="coluna-54-3" id="coluna-54-3"> <span class="star-rating"> <input type="radio" name="rating-54-3" value="1"><i></i> <input type="radio" name="rating-54-3" value="2"><i></i> <input type="radio" name="rating-54-3" value="3"><i></i><input type="radio" name="rating-54-3" value="4"><i></i><input type="radio" name="rating-54-3" value="5"><i></i></span></td><td class="coluna-54-4" id="coluna-54-4"> <span class="star-rating"> <input type="radio" name="rating-54-4" value="1"><i></i> <input type="radio" name="rating-54-4" value="2"><i></i> <input type="radio" name="rating-54-4" value="3"><i></i><input type="radio" name="rating-54-4" value="4"><i></i><input type="radio" name="rating-54-4" value="5"><i></i></span></td><td class="coluna-54-5" id="coluna-54-5"> <span class="star-rating"> <input type="radio" name="rating-54-5" value="1"><i></i> <input type="radio" name="rating-54-5" value="2"><i></i> <input type="radio" name="rating-54-5" value="3"><i></i><input type="radio" name="rating-54-5" value="4"><i></i><input type="radio" name="rating-54-5" value="5"><i></i></span></td></tr><tr class="d55" id="d55"><td><h3 class="coluna-55-0" id="coluna-55-0"> Vidraçaria</h3></td><td class="coluna-55-1" id="coluna-55-1"><div class="autocomplete" style="width:300px;" id="autocomplete55">
+                  <input class="myInput54"  name="myInput54" id="myInput54" style="width:200px" placeholder="Digite aqui o texto"></div></td><td class="coluna-54-2" id="coluna-54-2"> <span class="star-rating"> <input type="radio" name="rating-54-2" value="1"><i></i> <input type="radio" name="rating-54-2" value="2"><i></i> <input type="radio" name="rating-54-2" value="3"><i></i><input type="radio" name="rating-54-2" value="4"><i></i><input type="radio" name="rating-54-2" value="5"><i></i></span></td><td class="coluna-54-3" id="coluna-54-3"> <span class="star-rating"> <input type="radio" name="rating-54-3" value="1"><i></i> <input type="radio" name="rating-54-3" value="2"><i></i> <input type="radio" name="rating-54-3" value="3"><i></i><input type="radio" name="rating-54-3" value="4"><i></i><input type="radio" name="rating-54-3" value="5"><i></i></span></td><td class="coluna-54-4" id="coluna-54-4"> <span class="star-rating"> <input type="radio" name="rating-54-4" value="1"><i></i> <input type="radio" name="rating-54-4" value="2"><i></i> <input type="radio" name="rating-54-4" value="3"><i></i><input type="radio" name="rating-54-4" value="4"><i></i><input type="radio" name="rating-54-4" value="5"><i></i></span></td><td class="coluna-54-5" id="coluna-54-5"> <span class="star-rating">
+                     <input type="radio" name="rating-54-5" value="1"><i></i> <input type="radio" name="rating-54-5" value="2"><i></i> <input type="radio" name="rating-54-5" value="3"><i></i><input type="radio" name="rating-54-5" value="4"><i></i><input type="radio" name="rating-54-5" value="5"><i></i></span></td></tr><tr class="d55" id="d55"><td><h3 class="coluna-55-0" id="coluna-55-0"> Vidraçaria</h3></td><td class="coluna-55-1" id="coluna-55-1"><div class="autocomplete" style="width:300px;" id="autocomplete55">
                   <input class="myInput55"  name="myInput55" id="myInput55" style="width:200px" placeholder="Digite aqui o texto"></div></td><td class="coluna-55-2" id="coluna-55-2"> <span class="star-rating"> <input type="radio" name="rating-55-2" value="1"><i></i> <input type="radio" name="rating-55-2" value="2"><i></i> <input type="radio" name="rating-55-2" value="3"><i></i><input type="radio" name="rating-55-2" value="4"><i></i><input type="radio" name="rating-55-2" value="5"><i></i></span></td><td class="coluna-55-3" id="coluna-55-3"> <span class="star-rating"> <input type="radio" name="rating-55-3" value="1"><i></i> <input type="radio" name="rating-55-3" value="2"><i></i> <input type="radio" name="rating-55-3" value="3"><i></i><input type="radio" name="rating-55-3" value="4"><i></i><input type="radio" name="rating-55-3" value="5"><i></i></span></td><td class="coluna-55-4" id="coluna-55-4"> <span class="star-rating"> <input type="radio" name="rating-55-4" value="1">
                 <i>
                 </i>
@@ -2673,15 +2568,10 @@ function gerar(){
           <textarea rows="2" cols="30" maxlength="30" class="form-control is-invalid" id="inputSelect27" name="text-27" placeholder="Digite sua sugestão... " required></textarea>
       </div>
       <div class="espaco-50px">
-        <?php
-            if(!empty($_SESSION['dados'])){
-             $usuario =  $_SESSION['dados']['usuario'];
-             echo        $_SESSION['dados']['user']; 
-        }
-        ?>
-      <a href="../assets/dados/perguntas_<?php echo  $usuario  ?>.csv" class="perguntas">Exportar perguntas</a>
+      
+      <a href="../assets/dados/perguntas_.csv" class="perguntas">Exportar perguntas</a>
       <input class="salvar" type="submit" name="submit" value="Salvar" align="center"/>
-      <a href="../assets/dados/tabela_<?php echo  $usuario ?>.csv"    class="tabelas"> Exportar tabelas</a> 
+      <a href="../assets/dados/tabela_.csv"    class="tabelas"> Exportar tabelas</a> 
       <a type="button" class="sincronizar" href="subi/">Sincronizar</a> 
 
 
@@ -2691,8 +2581,10 @@ function gerar(){
       
   </form>
   
-</div>
+  </div>
 </section>
 </div>
 </body>
-</html>
+
+
+?></html>
